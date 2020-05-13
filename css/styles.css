@@ -40,3 +40,7 @@ footer {
     background-image: linear-gradient(#b7a8f8, white);
     padding: 20px 0px;
 }
+
+#date {
+    max-width:200px;
+}
