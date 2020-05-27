@@ -8,6 +8,7 @@
     
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
         <link rel="stylesheet" href="css/styles.css" />
     
@@ -23,20 +24,49 @@
             <div class="row">
                 <div class="col-4 col-sm-3 col-md-2 align-self-center">
                     <img src="img/logo.png" class="img-fluid" />
+<<<<<<< HEAD
                 </div>
+=======
+                 </div>
+>>>>>>> week2-end-workshop
                 <div class="col">
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>
                 </div>
+<<<<<<< HEAD
                 <div class="col col-md-4 col-xl-2 mt-4">
                     <a href="#reserveForm" class="btn btn-info">make rezzie</a>
                 </div>
                 
+=======
+                <div class="col-md-4 col-xl-2 mt-4">
+                    <a href="#reserveForm" role="button" class="btn btn-lg btn-info">Reserve Campsite</a>
+                </div>
+>>>>>>> week2-end-workshop
             </div>
         </div>
 
 
     </header>
+
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nucampNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i> About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i> Sites</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
 
 
 <div class="container">
@@ -44,9 +74,14 @@
         <div class="col-sm-4 order-sm-last col-md-3">
             <h2>Discover & Review</h2>
         </div>
-        <div class="col">    
-            <h3>Our Campsites</h3>
-            <p>Explore our growing database of curated campsites and leave your own reviews!</p>
+        <div class="col">
+            <div class="media">
+                <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail" />
+                <div class="media-body align-self-center">
+                    <h3>Our Campsites</h3>
+                    <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -55,6 +90,7 @@
             <h2>Featured Campsites</h2>
         </div>
         <div class="col">
+<<<<<<< HEAD
             <div class="media">
                <div class="media-body align-self-center ml-3 ">
                     <h3>React Lake Campground</h3>
@@ -62,6 +98,14 @@
                 </div>
                 <img class="d-flex img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="">
                 
+=======
+            <div class="media"> 
+                    <div class="col">
+                        <h3>React Lake Campground</h3>
+                        <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                    </div>
+                    <img src="img/react-lake-thumb.jpg" alt="react lake" class="d-flex img-thumbnail ml-3" >
+>>>>>>> week2-end-workshop
             </div>
         </div>
     </div>
@@ -71,9 +115,56 @@
             <h2>Our Community Partners</h2>
         </div>
         <div class="col">
-            <h3>Bootstrap Outfitters</h3>
-            <p>Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
-        </div>          
+            <div class="media">
+                <img class="d-flex mr-3 img-thumbnail " src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters">
+                <div class="media-body align-self-center">
+                    <h3>Bootstrap Outfitters</h3>
+                    <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <div class="row row-content">
+        <div class="col-sm-10 mx-auto">
+            <div class="card card-form">
+                <h3 class="card-header bg-info text-white"></h3>
+                <div class="card-body">
+                    <h2 class="mb-1">make a reservation today</h2>
+                    <form action="" id="reserveForm">
+                        <div class="row form-group mt-4">
+                            
+                                <div class="col-sm-6 col-form-label">
+                                    <label for="numCampers">number of campers</label>
+                                </div>
+                              
+                                <div class="col">
+                                    <select id="numCampers" class="form-control">
+                                        <option value="" disabled selected>Select...</option>
+                                        <option value="volvo">1</option>
+                                        <option value="saab">2</option>
+                                        <option value="mercedes">3</option>
+                                        <option value="audi">4</option>
+                                        <option value="audi">5</option>
+                                        <option value="audi">6</option>              
+                                    </select>
+                                </div>        
+                            
+                        </div>
+                        <div class="form-group row">
+                            <label for="date" class="col-sm-6 col-form-label">Date</label>
+                            <div class="col">   
+                                <input type="date" class="form-control" id="date" name="date" placeholder="Date" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col">
+                                <button class="btn bg-primary text-white mt-2">reserve</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="row-content">
@@ -123,7 +214,7 @@
 
 </div>
 
-    <footer>
+<footer class="site-footer">
         <div class="container">
             <div class="row">
                 <div class="col-4 col-sm-2 offset-1">
@@ -137,14 +228,14 @@
                 </div>
                 <div class="col-6 col-sm-5">
                     <h5>Social</h5>
-                    <a href="http://instagram.com/">Instagram</a>
-                    <a href="http://facebook.com/">Facebook</a>
-                    <a href="http://twitter.com/">Twitter</a>
-                    <a href="http://youtube.com/">YouTube</a>
+                    <a href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
+                    <a href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+                    <a href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                    <a href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
                 </div>
                 <div class="col-sm-4">
-                    Tel: 1-206-555-1234<br />
-                    Email: campsites@nucamp.co
+                    <i class="fa fa-phone fa-lg text-primary"></i> 1-206-555-1234<br />
+                    <i class="fa fa-envelope fa-lg text-primary"></i> campsites@nucamp.co
                 </div>
             </div>
         </div>
