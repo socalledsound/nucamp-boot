@@ -61,6 +61,8 @@ body {
 <body>
     <!-- <button>Show Modal</button> -->
 
+
+   <!-- this class name here - hidden - is the key, we will remove it in javascript  -->
 <div class="modal hidden">
   <div class="container">
     <div class="modal-body">
@@ -73,26 +75,30 @@ body {
 </div>
 
 <script>
+  // make our dom selections
     const modal = document.querySelector(".modal");
     const modalBody = document.querySelector(".modal-body");
     const container = modal.querySelector(".container");
+    //let's set an initial opacity of 0 so we can animate that and fade the modal in
     let opacity = 0;
     // let modalOpacity = modal.style.opacity;
     // modalOpacity = `${1}`;
     
     
-
+  // remove the 'hidden' class
     showModal();
+// a loop to slowly fade in our modal
     mainLoop();
 
 
-
+//each time through the loop we increment opacity by .001
     function mainLoop(){
         if(opacity < 0.8){
             fadeInModal();
         }
         window.requestAnimationFrame(mainLoop);
     }
+
 
     function fadeInModal(){
         opacity += 0.001;
@@ -104,6 +110,7 @@ body {
 
     }
 
+//add an event listener so we can close the modal when we're done reading it
 document.querySelector(".closeModal").addEventListener("click", function (e) {
       
   modal.classList.add("hidden");
