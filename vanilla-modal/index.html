@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+body {
+    background-color: orangered;
+}
+
+.modal {
+  /* background-color: rgba(0,0,0,0.2); Transparent dimmed overlay */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal .container {
+ display: table-cell;
+ text-align: center;
+ vertical-align: middle;
+ width: 800px;
+}
+
+.modal-body {
+    position: relative;
+    width: 40vw;
+    min-height: 300px;
+    margin-top: 100px;
+    box-shadow: 5px 10px rgba(200, 200, 200,0.2);
+    display: inline-block;
+    background-color:rgb(255 ,255, 255);
+    opacity: 0;
+    border: 6px solid rgba(0,0,0,0.2); 
+    border-radius: 20px;
+    padding-top: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+.closeModal {
+    font-size:60px;
+    text-decoration: none;
+    color: rgba(0,0,0,0.7);
+    position: absolute;
+    left:10px;
+    top: 10px;
+}
+    </style>
+</head>
+<body>
+    <!-- <button>Show Modal</button> -->
+
+<div class="modal hidden">
+  <div class="container">
+    <div class="modal-body">
+        <a href="#"  class="closeModal">&times;</a>
+        <p class="modal-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam velit architecto tempora facilis consectetur quaerat ad repellat itaque eveniet fuga, tempore autem dolores odio porro id commodi harum debitis corporis error nemo ullam? Magnam officiis aliquid perspiciatis debitis dignissimos minus quibusdam earum, praesentium commodi nemo qui? Quia, odio aspernatur? Quam at ratione mollitia quasi eum consequatur eligendi excepturi. Ex error earum repudiandae, possimus vitae, velit soluta labore a, tempore quia officia. Illo excepturi consequuntur alias quas sunt tempora quam dolorem quisquam nisi, ex explicabo. Repudiandae distinctio dolor sequi, aut labore iste tenetur libero error, similique temporibus repellendus nam inventore illum modi pariatur placeat itaque quas atque voluptatibus cupiditate praesentium? Quasi voluptatem molestiae omnis natus nisi? Eum, earum dicta. Libero est ea nihil nam perferendis vitae eos illum tempore soluta animi impedit ipsum maxime fuga, repellat et, possimus omnis doloribus sapiente praesentium vel commodi eligendi. Reiciendis, perferendis veniam perspiciatis officiis ea doloribus voluptas? Beatae, adipisci. Doloribus, dolore. Quos minus in itaque dolorum doloribus eligendi, nesciunt non ratione minima distinctio atque libero repellat quis placeat suscipit quidem. Expedita nobis accusamus sunt reiciendis praesentium asperiores optio sit aliquid, qui, odio officiis corrupti, nihil obcaecati. Itaque eius minus repellendus temporibus aliquid animi pariatur placeat nam consequatur molestias suscipit, laudantium maiores assumenda eligendi nesciunt delectus iusto, optio, vitae non explicabo. A quia suscipit nesciunt sunt explicabo voluptate numquam tenetur ratione repudiandae. A, nesciunt atque? Assumenda dicta tempora fugit eaque saepe laboriosam repudiandae nam quas magnam quasi quam ullam sed, nesciunt ratione non dolor labore et molestias, corporis culpa voluptatem veniam! Laborum perspiciatis est fugit blanditiis harum id cupiditate quis ex optio ducimus neque, voluptas distinctio tempore aspernatur dolor vero fugiat eum nemo animi expedita. Consequatur magni consequuntur id voluptate animi inventore explicabo voluptas voluptatum aliquid praesentium et quibusdam possimus ex, perspiciatis cupiditate quia dicta perferendis.</p>
+     
+      <!-- <button class="close" data-dismiss="modal">&times;</button> -->
+    </div>
+  </div>
+</div>
+
+<script>
+    const modal = document.querySelector(".modal");
+    const modalBody = document.querySelector(".modal-body");
+    const container = modal.querySelector(".container");
+    let opacity = 0;
+    // let modalOpacity = modal.style.opacity;
+    // modalOpacity = `${1}`;
+    
+    
+
+    showModal();
+    mainLoop();
+
+
+
+    function mainLoop(){
+        if(opacity < 0.8){
+            fadeInModal();
+        }
+        window.requestAnimationFrame(mainLoop);
+    }
+
+    function fadeInModal(){
+        opacity += 0.001;
+        modalBody.style.opacity = `${opacity}`;
+    }
+
+    function showModal(){
+        modal.classList.remove("hidden");
+
+    }
+
+document.querySelector(".closeModal").addEventListener("click", function (e) {
+      
+  modal.classList.add("hidden");
+});
+</script>
+</body>
+</html>
