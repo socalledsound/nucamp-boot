@@ -50,3 +50,18 @@ footer {
     border-top: none;
     padding: 10px;
 }
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel {
+    border: solid #5637DD;
+}
+
+#carouselButton {
+    z-index: 100;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
