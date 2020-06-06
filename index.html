@@ -109,9 +109,10 @@
                     <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>
                 </ul>
                 <span class="navbar-text ml-auto">
-                    <a role="button" data-toggle="modal" data-target="#loginModal">
-                        <i class="fa fa-sign-in"></i> Login
-                    </a>
+
+                    <a role="button" id="loginButton">
+                    <i class="fa fa-sign-in"></i> Login</a>
+
                 </span>
             </div>
         </div>
@@ -254,93 +255,7 @@
             </div>
         </div>        
     </div>
-    <div class="row row-content">
-        <div class="col-sm-10 mx-auto">
-            <div class="card card-form">
-                <h3 class="card-header bg-info text-white"></h3>
-                <div class="card-body">
-                    <h2 class="mb-1">make a reservation today</h2>
-                    <form action="" id="reserveForm">
-                        <div class="row form-group mt-4">
-                            
-                                <div class="col-sm-6 col-form-label">
-                                    <label for="numCampers">number of campers</label>
-                                </div>
-                              
-                                <div class="col">
-                                    <select id="numCampers" class="form-control">
-                                        <option value="" disabled selected>Select...</option>
-                                        <option value="volvo">1</option>
-                                        <option value="saab">2</option>
-                                        <option value="mercedes">3</option>
-                                        <option value="audi">4</option>
-                                        <option value="audi">5</option>
-                                        <option value="audi">6</option>              
-                                    </select>
-                                </div>        
-                            
-                        </div>
-                        <div class="form-group row">
-                            <label for="date" class="col-sm-6 col-form-label">Date</label>
-                            <div class="col">   
-                                <input type="date" class="form-control" id="date" name="date" placeholder="Date" />
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col">
-                                <button class="btn bg-primary text-white mt-2">reserve</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row-content">
-        <div class="col mx-auto">
-            <div class="card">
-                <h3 class="card-header bg-info text-white"></h3>
-                <div class="card-body">
-                    <form id="reserveForm">
-                        <div class="row form-group">
-                            <label for="numCampers" class="col-12 col-form-label">numcampers</label>
-                            <div class="col">
-                                <select name="numCampers" id="numCampers" class="form-control">
-                                    <option selected>numcampers</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                </select>
-                            </div>
-                        </div>
-                        
-                        <div class="row form-group">
-                            <label class="col-sm-4 col-form-label" for="date">Date</label>
-                            <div class="col-sm-8">
-                                <input class="form-control" type="date" id="date" name="date" placeholder="date">                  
-                            </div>
-                            
-                        </div>
-
-                        
-
-                        <div class="row">
-                            <div class="col">
-                                <button type="submit" class="btn btn-primary">search</button>
-                            </div>
-
-                        </div>
-                    </form>
-                </div>
-                
-            </div>
-            
-        </div>
-    </div>
+  
 
 </div>
 

@@ -25,17 +25,24 @@ header h2 {
   border-bottom: 1px ridge;
   min-height: 200px; }
 
-.navbar {
+.navbar-dark {
   background-color: #901CAD; }
-
-.carousel-caption {
-  background-color: rgba(0, 0, 0, 0.5); }
 
 .carousel {
   border: solid #5637DD; }
 
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5); }
+
 #carouselButton {
-  z-index: 100;
   position: absolute;
   right: 0;
   bottom: 0; }
+
+#reserveModal .modal-header {
+  background-color: #17A2B8;
+  color: white; }
+
+#loginModal .modal-header {
+  background-color: #901CAD;
+  color: white; }
