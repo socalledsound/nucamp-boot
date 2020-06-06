@@ -4,6 +4,7 @@ $color-pale: #CEC8FF;
 $color-mid: #901CAD;
 $color-dark: #60106B;
 $color-black-transparent: rgba(0, 0, 0, 0.5);
+$color-teal: #17A2B8;
 
 $body-font: "Open Sans", sans-serif;
 $header-font: "Lobster", cursive;
@@ -26,7 +27,7 @@ header {
     }
 }
 
-.site-footer {
+.site-footer{
     background-image: linear-gradient($color-pale, white);
     padding: 20px 0;
 }
@@ -35,7 +36,7 @@ header {
     margin: 0;
     padding: 30px;
     background-image: linear-gradient(to right, $color-secondary, $color-primary, $color-dark);
-    color: white;
+    color:white;
 }
 
 .row-content {
@@ -44,21 +45,34 @@ header {
     min-height: 200px;
 }
 
-.navbar {
+.navbar-dark {
     background-color: $color-mid;
-}
-
-.carousel-caption {
-    background-color: $color-black-transparent;
 }
 
 .carousel {
     border: solid $color-secondary;
 }
 
+.carousel-caption {
+    background-color: $color-black-transparent;
+}
+
 #carouselButton {
-    z-index: 100;
     position: absolute;
     right: 0;
     bottom: 0;
+}
+
+#reserveModal {
+    .modal-header {
+        background-color: $color-teal;
+        color: white;
+    }
+}
+
+#loginModal {
+    .modal-header {
+        background-color: $color-mid;
+        color: white;
+    }
 }
